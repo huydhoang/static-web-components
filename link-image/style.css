@@ -1,0 +1,6 @@
+figure[class="portfolio"] img {
+  max-width: 300px;
+}
+figure[class="details"] img {
+  max-width: 500px;
+}
