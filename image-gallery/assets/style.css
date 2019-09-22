@@ -16,6 +16,7 @@ main {
   background-color: white;
   display: flex;
   flex-wrap: wrap;
+  padding-left: 60px;
 }
 
 figure img {
@@ -58,13 +59,13 @@ header li a {
 }
 
 .box {
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, transform 0.5s;
   margin: 10px;
   border-radius: 10px;
   border: 1px solid #ccc;
   background: #fff;
-  float: left;
 }
 .box:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  transform: scale(1.5, 1.5);
 }
