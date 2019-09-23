@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Live character count</title>
+    <style>
+      textarea {
+        min-width: 360px;
+        min-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea
+      id="textbox"
+      onkeyup="charcountupdate(this.value)"
+      placeholder="Start typing to see results"
+    ></textarea>
+    <span id="charcount"></span>
+    <script>
+      function charcountupdate(str) {
+        var lng = str.length;
+        document.getElementById("charcount").innerHTML =
+          lng + " out of ### characters";
+      }
+    </script>
+  </body>
+</html>
