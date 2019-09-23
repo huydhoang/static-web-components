@@ -3,25 +3,26 @@
 }
 
 header img {
-  height: 80px;
-  margin-left: 40px;
+  height: 100%;
+  margin-left: 1.5rem;
 }
 body {
   font-family: sans-serif;
-  margin-top: 80px;
-  padding: 30px;
+  font-size: 1rem;
+  margin-top: 5rem;
+  padding: 2.5%;
 }
 
 main {
   background-color: white;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 60px;
+  justify-content: space-around;
 }
 
 figure img {
   max-width: 25vw;
-  min-height: 250px;
+  min-height: auto;
 }
 
 figure {
@@ -30,7 +31,7 @@ figure {
 
 figure * {
   display: block;
-  padding: 5px;
+  padding: 1%;
 }
 
 header {
@@ -39,7 +40,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 5rem;
   display: flex;
   align-items: center;
   box-shadow: 0 0 25px 0 black;
@@ -67,5 +68,5 @@ header li a {
 }
 .box:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-  transform: scale(1.5, 1.5);
+  transform: scale(1.05, 1.05);
 }
