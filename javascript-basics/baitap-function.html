@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Function</title>
+  </head>
+  <body>
+    <form id="bai-1">
+      <h1>Type a number to get its squared value:</h1>
+      <input
+        type="text"
+        id="any-number"
+        name="any-number"
+        placeholder="Any number"
+      />
+      <button id="btn-get-sq">Calculate</button>
+    </form>
+    <div id="ketqua1"></div>
+
+    <form id="bai-2">
+      <h1>Type a year to get its century:</h1>
+      <input type="text" id="any-year" name="any-year" placeholder="Any year" />
+      <button id="btn-get-ctr">Calculate</button>
+    </form>
+    <div id="ketqua2"></div>
+
+    <form id="bai-3">
+      <h1>Generate summary:</h1>
+      <input
+        type="text"
+        id="long-str"
+        name="long-str"
+        placeholder="A long string"
+      />
+      <button id="btn-gen-sum">Generate</button>
+    </form>
+    <div id="ketqua3"></div>
+
+    <form id="bai-4">
+      <h1>First char to UpperCase:</h1>
+      <input type="text" id="any-str" name="any-str" placeholder="Any string" />
+      <button id="btn-up-char">Convert</button>
+    </form>
+    <div id="ketqua4"></div>
+
+    <script>
+      // Bai tap 1
+      function getSquared(event) {
+        event.preventDefault();
+        let userInput = document.getElementById("any-number").value;
+        let num = parseFloat(userInput);
+        let result = num * num;
+
+        document.getElementById(
+          "ketqua1"
+        ).innerHTML = `<h1>The squared value is ${result}</h1><br>`;
+      }
+      const btnGetSq = document.getElementById("btn-get-sq");
+      btnGetSq.addEventListener("click", getSquared);
+
+      // Bai tap 2
+      function getCentury(event) {
+        event.preventDefault();
+        let userInput = document.getElementById("any-year").value;
+        let year = parseInt(userInput);
+        let result = 1 + Math.floor(year / 100);
+
+        document.getElementById(
+          "ketqua2"
+        ).innerHTML = `<h1>This year belongs to the ${result}th century.</h1><br>`;
+      }
+      const btnGetCtr = document.getElementById("btn-get-ctr");
+      btnGetCtr.addEventListener("click", getCentury);
+
+      // Bai tap 3
+      function genSum(event) {
+        event.preventDefault();
+        let userInput = document.getElementById("long-str").value;
+        let result = userInput.substring(0, 10);
+        document.getElementById(
+          "ketqua3"
+        ).innerHTML = `<h1>Summary: ${result}...</h1><br>`;
+      }
+      const btnGenSum = document.getElementById("btn-gen-sum");
+      btnGenSum.addEventListener("click", genSum);
+
+      // Bai tap 4
+      function upFirstChar(event) {
+        event.preventDefault();
+        let userInput = document.getElementById("any-str").value;
+        if (typeof userInput === "string") {
+          let result =
+            userInput.charAt(0).toUpperCase() +
+            userInput.slice(1).toLowerCase();
+
+          document.getElementById(
+            "ketqua4"
+          ).innerHTML = `<h1>Result: ${result}.</h1><br>`;
+        }
+        return null;
+      }
+      const btnUpChar = document.getElementById("btn-up-char");
+      btnUpChar.addEventListener("click", upFirstChar);
+    </script>
+  </body>
+</html>
